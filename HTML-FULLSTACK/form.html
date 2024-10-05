@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Sederhana</title>
+    <script>
+        //membuat script function untuk popup
+        function submitForm(event) {
+            event.preventDefault(); // membuat pengiriman dummy
+            
+            // Menampilkan pop-up ucapan terima kasih
+            alert("Terima kasih sudah mengisi form!");
+            
+            // Mengosongkan semua input form
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('age').value = '';
+            document.getElementById('message').value = '';
+        }
+    </script>
+</head>
+<body>
+    <!-- <center> -->
+        <h2>Form Input Sederhana</h2>
+        <form onsubmit="submitForm(event)">
+            <label for="name">Nama:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="age">Umur:</label><br>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="message">Pesan:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+            <input type="submit" value="Kirim">
+        </form>
+    <!-- </center> -->
+    
+</body>
+</html>
+
+
